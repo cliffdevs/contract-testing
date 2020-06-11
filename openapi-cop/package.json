@@ -1,0 +1,9 @@
+{
+  "name": "openapi-cop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "openapi-cop": "^1.0.0"
+  }
+}

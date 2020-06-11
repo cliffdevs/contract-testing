@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  testapp:
+    image: node:12
+    entrypoint: sh
+    command: run.sh
+    working_dir: /project
+    user: 1000:1000
+    volumes:
+    - $PWD/testapp:/project
+    ports:
+    - 8080
+  openapi-cop:
+    image: node:12
+    entrypoint: sh
+    command: run.sh
+    working_dir: /project
+    user: 1000:1000
+    volumes:
+    - $PWD/openapi-cop:/project
+    - $PWD/openapi.yml:/project/openapi.yml
+    ports:
+    - 8080:8080
+    environment: 
+    - PORT=8080
+    - HOST=openapi-cop
+    - TARGET_URI=http://testapp:8080
+    - API_DOC=/project/openapi.yml
+    - FORBID_ADDITIONAL_PROPS=false
+    - SILENT_MODE_ENABLED=false

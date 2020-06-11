@@ -1,0 +1,20 @@
+openapi: 3.0.1
+info:
+  description: Hello
+  title: Hello
+  version: '1.0'
+paths:
+  '/hello/{name}':
+    parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Say Hello
+      description: Says hello back
+      operationId: hello
+      responses:
+        '200':
+          description: OK
