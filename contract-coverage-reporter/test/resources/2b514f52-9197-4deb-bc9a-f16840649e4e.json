@@ -1,0 +1,4 @@
+{
+    "openapi-cop-source-request": {"method":"GET","path":"/hello/world","headers":{"host":"localhost:8080","user-agent":"curl/7.68.0","accept":"*/*"},"query":{}},
+    "openapi-cop-validation-result": {"request":{"valid":true,"errors":null},"response":{"valid":true,"errors":null},"responseHeaders":{"valid":true,"errors":null}}
+}
