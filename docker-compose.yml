@@ -7,7 +7,7 @@ services:
     working_dir: /project
     user: 1000:1000
     volumes:
-    - $PWD/testapp:/project
+    - $PWD/testapp:/project:ro
     ports:
     - 8080
   openapi-cop:
@@ -17,8 +17,8 @@ services:
     working_dir: /project
     user: 1000:1000
     volumes:
-    - $PWD/openapi-cop:/project
-    - $PWD/openapi.yml:/project/openapi.yml
+    - $PWD/openapi-cop:/project:ro
+    - $PWD/openapi.yml:/project/openapi.yml:ro
     ports:
     - 8080
     environment: 
@@ -35,12 +35,11 @@ services:
     working_dir: /project
     user: 1000:1000
     volumes:
-    - $PWD/response-reporter:/project
-    - $PWD/build/reports:/project/build/reports:rw
+    - $PWD/response-reporter:/project:ro
+    - $PWD:/project/build:rw
     ports:
     - 8080:8080
-    - 9229:9229
     environment: 
     - PORT=8080
     - TARGET_URI=http://openapi-cop:8080
-    - REPORT_DIR=/project/reports/contract-validation
+    - REPORT_DIR=/project/build/reports/contract-validation
