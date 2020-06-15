@@ -39,6 +39,7 @@ services:
     - $PWD/build/reports:/project/build/reports:rw
     ports:
     - 8080:8080
+    - 9229:9229
     environment: 
     - PORT=8080
     - TARGET_URI=http://openapi-cop:8080

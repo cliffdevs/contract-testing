@@ -219,6 +219,13 @@ ipaddr.js@1.9.1:
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.9.1.tgz#bff38543eeb8984825079ff3a2a8e6cbd46781b3"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
+lift-result@~0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/lift-result/-/lift-result-0.1.5.tgz#a9883b249346fe31cc282d8559839189a66ab383"
+  integrity sha1-qYg7JJNG/jHMKC2FWYORiaZqs4M=
+  dependencies:
+    result "~1.0.2"
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -251,6 +258,18 @@ mime@1.6.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
   integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
 
+minimist@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+
+mkdirp@^0.5.0:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
+  integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
+  dependencies:
+    minimist "^1.2.5"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -270,6 +289,10 @@ negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+
+next-tick@timoxley/next-tick#0.0.2:
+  version "0.0.2"
+  resolved "https://codeload.github.com/timoxley/next-tick/tar.gz/6f25f8c2d25697dead7e49e978ae4c31703f7490"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -325,6 +348,27 @@ raw-body@^2.3.0:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+result-core@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/result-core/-/result-core-1.2.1.tgz#dcfcab62cea11ed5aebe12941b23970c17be58ea"
+  integrity sha1-3PyrYs6hHtWuvhKUGyOXDBe+WOo=
+  dependencies:
+    next-tick timoxley/next-tick#0.0.2
+    result-type "1.0.0"
+
+result-type@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/result-type/-/result-type-1.0.0.tgz#e4f1a5bf226c5c6b1f1450068763ed9f4fe69879"
+  integrity sha1-5PGlvyJsXGsfFFAGh2Ptn0/mmHk=
+
+result@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/result/-/result-1.0.3.tgz#a82fab4679068e3523bbe3eec8241453dcc5542e"
+  integrity sha1-qC+rRnkGjjUju+PuyCQUU9zFVC4=
+  dependencies:
+    result-core "1.2.1"
+    result-type "1.0.0"
 
 safe-buffer@5.1.2:
   version "5.1.2"
@@ -407,3 +451,12 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+writefile@^0.2.8:
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/writefile/-/writefile-0.2.8.tgz#dc0d1933798b994308e0eeb5511da1d6f2624b3e"
+  integrity sha1-3A0ZM3mLmUMI4O61UR2h1vJiSz4=
+  dependencies:
+    lift-result "~0.1.5"
+    mkdirp "^0.5.0"
+    result-type "1.0.0"
