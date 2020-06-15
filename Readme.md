@@ -16,7 +16,8 @@ From here you can call up the service under test and read validation info from t
 curl --verbose http://locahost:8080/hello/world
 ```
 
+You can see the response coming back from curl with some extra openapi-cop headers. These are actually intercepted by a test proxy `response-reporter` that outputs the data in JSON files that will later be aggregated by a coverage reporter.
+
 ## Next Steps
-* Write the response headers to report files
 * Parse the individual response reports, aggregate results
 * Generate an overal test report in JSON and HTML
