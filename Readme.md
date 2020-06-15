@@ -4,7 +4,7 @@ This is a sample project for how to perform contract validation testing for APIs
 
 ## How to Use
 
-Currently this is a POC, but more work will be done to build reports and assertions in the near future.
+Currently this is a POC, but more work will be done to build reports and assertions in the near future. To use this example, you need to have installed both [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
 To poke this:
 ```bash
