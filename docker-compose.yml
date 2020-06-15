@@ -35,7 +35,7 @@ services:
     working_dir: /project
     user: 1000:1000
     volumes:
-    - $PWD/response-reporter:/project:ro
+    - $PWD/response-reporter:/project:rw
     - $PWD:/project/build:rw
     ports:
     - 8080:8080
