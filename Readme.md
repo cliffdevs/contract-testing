@@ -13,7 +13,7 @@ docker-compose up
 
 From here you can call up the service under test and read validation info from the response headers:
 ```bash
-curl --verbose http://locahost:8080/hello/world
+curl --verbose http://localhost:8080/hello/world
 ```
 
 You can see the response coming back from curl with some extra openapi-cop headers. These are actually intercepted by a test proxy `response-reporter` that outputs the data in JSON files that will later be aggregated by a coverage reporter.
