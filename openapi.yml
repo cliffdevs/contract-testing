@@ -18,3 +18,10 @@ paths:
       responses:
         '200':
           description: OK
+        '304':
+          description: No Content
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+          
